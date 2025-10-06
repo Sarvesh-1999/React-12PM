@@ -9,4 +9,4 @@ class Cbc extends Component {
     );
   }
 }
-export default Cbc
+export default Cbc;

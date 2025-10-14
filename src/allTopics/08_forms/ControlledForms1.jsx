@@ -1,73 +1,64 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const ControlledForms1 = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    //! creating new user
-    let user = { id:Date.now() , username, email, password };
-    console.log(user); 
+  const handleUsername = (event) => {
+    setUsername(event.target.value);
+  };
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
 
-    //! get user from localStorage OR []
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let newUser = { username, email, password };
+    console.log(newUser);
+
     let allUsers = JSON.parse(localStorage.getItem("users")) || []
 
-    //! push newUser to allUsers[]
-    allUsers.push(user)
+    allUsers.push(newUser)
 
-    //! store allUsers in localStorage
-    localStorage.setItem("users",JSON.stringify(allUsers))
+    localStorage.setItem("users" , JSON.stringify(allUsers))
 
-    // clear input fields
     setUsername("")
     setEmail("")
     setPassword("")
-  }
+  };
 
   return (
     <div>
-      <h1>ControlledForms 1</h1>
+      <h1>ControlledForms1</h1>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username :</label>
         <input
           type="text"
-          id="username"
+          placeholder="Username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={handleUsername}
         />
-
         <br />
-        <br />
-
-        <label htmlFor="email">Email :</label>
         <input
           type="text"
-          id="email"
+          placeholder="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleEmail}
         />
-
         <br />
-        <br />
-
-        <label htmlFor="password">Password :</label>
         <input
           type="text"
-          id="password"
+          placeholder="Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handlePassword}
         />
-
-        <br />
         <br />
         <button>Submit</button>
       </form>
-
-
-      
     </div>
   );
 };

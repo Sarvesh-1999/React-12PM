@@ -25,19 +25,38 @@
     </form>
 
     <script>
+      const formTag = document.querySelector("form");
 
-        const formTag = document.querySelector("form")
+      formTag.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("Form SUbmitted");
+        console.log(e);
+        console.log(e.target[0].value);
+        console.log(e.target[1].value);
+        console.log(e.target[2].value);
+      });
 
-        formTag.addEventListener("submit",(e)=>{
-            e.preventDefault()
-            console.log("Form SUbmitted");
-            console.log(e);
-            console.log(e.target[0].value);
-            console.log(e.target[1].value);
-            console.log(e.target[2].value);
-        })
+      // let name = "username";
 
+      // let obj1 = {
+      //   [name]: "John Doe",
+      // };
 
+      // console.log(obj1);
+
+      let obj1 = {
+        username: "",
+        password:""
+      };
+
+      let obj2 = {
+        ...obj1,
+        email: "",
+        password : "12345678"
+      };
+
+      console.log(obj2);
+      
     </script>
   </body>
 </html>

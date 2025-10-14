@@ -10,6 +10,7 @@ import Parent1 from "./allTopics/06_childrenProps/Parent1";
 import Context2 from "./allTopics/07_context2/Context2";
 import ParentA1 from "./allTopics/07_context2/ParentA1";
 import ControlledForms1 from "./allTopics/08_forms/ControlledForms1";
+import ControlledForms2 from "./allTopics/08_forms/ControlledForms2";
 import Card from "./components/Card";
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
       {/* <Context1/> */}
       {/* <Parent1/> */}
       {/* <ParentA1 /> */}
-      <ControlledForms1/>
+      {/* <ControlledForms1/> */}
+      <ControlledForms2/>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Cbc from "./allTopics/01_typesOfComponent/Cbc";
 import Fbc from "./allTopics/01_typesOfComponent/Fbc";
 import CounterInFbc from "./allTopics/02_states/CounterInFbc";
@@ -11,9 +12,14 @@ import Context2 from "./allTopics/07_context2/Context2";
 import ParentA1 from "./allTopics/07_context2/ParentA1";
 import ControlledForms1 from "./allTopics/08_forms/ControlledForms1";
 import ControlledForms2 from "./allTopics/08_forms/ControlledForms2";
+import LifeCycleInCBC from "./allTopics/09_lifecycle/LifeCycleInCBC";
 import Card from "./components/Card";
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => setToggle(!toggle);
+
   return (
     <>
       {/* <Card/> */}
@@ -28,7 +34,14 @@ function App() {
       {/* <Parent1/> */}
       {/* <ParentA1 /> */}
       {/* <ControlledForms1/> */}
-      <ControlledForms2/>
+      {/* <ControlledForms2/> */}
+
+      <button onClick={handleToggle}>
+        toggle
+      </button>
+
+      {toggle ?  <LifeCycleInCBC /> : <h1>No Component</h1>}
+     
     </>
   );
 }

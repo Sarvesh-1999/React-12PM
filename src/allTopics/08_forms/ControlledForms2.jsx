@@ -9,7 +9,7 @@ const ControlledForms2 = () => {
 
   const handleChange = (e) => {
     let { name, value } = e.target;
-    setLoginUser({ ...loginUser, [name]: value });
+    setLoginUser({...loginUser, [name]: value });
   };
 
   const handleSubmit = (e) => {

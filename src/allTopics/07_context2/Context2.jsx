@@ -3,7 +3,7 @@ import { createContext } from "react";
 export const Store2Context = createContext();
 
 const Context2 = (props) => {
-  console.log(props); // { children : {} }
+  // console.log(props); // { children : {} }
 
   let data1 = "Hello";
 

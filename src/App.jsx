@@ -14,6 +14,8 @@ import ControlledForms1 from "./allTopics/08_forms/ControlledForms1";
 import ControlledForms2 from "./allTopics/08_forms/ControlledForms2";
 import LifeCycleInCBC from "./allTopics/09_lifecycle/LifeCycleInCBC";
 import Card from "./components/Card";
+import LifeCycleInFBC from "./allTopics/09_lifecycle/LifeCycleInFBC";
+import FetchUsers from "./allTopics/10_apiCall/FetchUsers";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -36,12 +38,14 @@ function App() {
       {/* <ControlledForms1/> */}
       {/* <ControlledForms2/> */}
 
-      <button onClick={handleToggle}>
+      {/* <button onClick={handleToggle}>
         toggle
-      </button>
+      </button> */}
 
-      {toggle ?  <LifeCycleInCBC /> : <h1>No Component</h1>}
-     
+      {/* {toggle ?  <LifeCycleInCBC /> : <h1>No Component</h1>} */}
+
+      {/* <LifeCycleInFBC/> */}
+     <FetchUsers/>
     </>
   );
 }

@@ -16,6 +16,8 @@ import LifeCycleInCBC from "./allTopics/09_lifecycle/LifeCycleInCBC";
 import Card from "./components/Card";
 import LifeCycleInFBC from "./allTopics/09_lifecycle/LifeCycleInFBC";
 import FetchUsers from "./allTopics/10_apiCall/FetchUsers";
+import Products from "./allTopics/10_apiCall/Products";
+import Posts from "./allTopics/11_customHook/Posts";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -45,7 +47,12 @@ function App() {
       {/* {toggle ?  <LifeCycleInCBC /> : <h1>No Component</h1>} */}
 
       {/* <LifeCycleInFBC/> */}
-     <FetchUsers/>
+      {/* <FetchUsers/> */}
+
+      {/* <button onClick={handleToggle}>Toogle Btn</button>
+      {toggle ? <Products /> : <h1>No Component</h1>} */}
+
+      <Posts/>
     </>
   );
 }

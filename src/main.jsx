@@ -1,6 +1,8 @@
 //! REACT way
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import "./global.css"
+
 import Context2 from "./allTopics/07_context2/Context2";
 createRoot(document.getElementById("root")).render(
     <Context2>

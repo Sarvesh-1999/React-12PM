@@ -18,6 +18,7 @@ import LifeCycleInFBC from "./allTopics/09_lifecycle/LifeCycleInFBC";
 import FetchUsers from "./allTopics/10_apiCall/FetchUsers";
 import Products from "./allTopics/10_apiCall/Products";
 import Posts from "./allTopics/11_customHook/Posts";
+import Routing1 from "./allTopics/12_routing/Routing1";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -52,7 +53,9 @@ function App() {
       {/* <button onClick={handleToggle}>Toogle Btn</button>
       {toggle ? <Products /> : <h1>No Component</h1>} */}
 
-      <Posts/>
+      {/* <Posts/> */}
+
+      <Routing1/>
     </>
   );
 }

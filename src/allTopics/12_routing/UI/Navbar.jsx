@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-violet-800 text-white flex justify-between px-6 py-3.5">
       <div>
-        <Link to="/">Browser Router</Link>
+        <Link to="/home">Browser Router</Link>
       </div>
 
       <div className="gap-5 hidden md:flex">

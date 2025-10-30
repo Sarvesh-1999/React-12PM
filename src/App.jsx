@@ -19,6 +19,8 @@ import FetchUsers from "./allTopics/10_apiCall/FetchUsers";
 import Products from "./allTopics/10_apiCall/Products";
 import Posts from "./allTopics/11_customHook/Posts";
 import Routing1 from "./allTopics/12_routing/Routing1";
+import Routing2 from "./allTopics/12_routing2/Routing2";
+import UnControlledForms from "./allTopics/08_forms/UnControlledForms";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -55,7 +57,9 @@ function App() {
 
       {/* <Posts/> */}
 
-      <Routing1/>
+      {/* <Routing1/> */}
+      {/* <Routing2/> */}
+        <UnControlledForms/>
     </>
   );
 }

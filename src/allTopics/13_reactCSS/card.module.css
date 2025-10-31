@@ -1,0 +1,9 @@
+#container{
+    background-color: yellow;
+}
+
+#container>button{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}

@@ -21,6 +21,8 @@ import Posts from "./allTopics/11_customHook/Posts";
 import Routing1 from "./allTopics/12_routing/Routing1";
 import Routing2 from "./allTopics/12_routing2/Routing2";
 import UnControlledForms from "./allTopics/08_forms/UnControlledForms";
+import Dashboard from "./allTopics/13_reactCSS/Dashboard";
+import Reducer from "./allTopics/14_reducer/Reducer";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -59,7 +61,9 @@ function App() {
 
       {/* <Routing1/> */}
       {/* <Routing2/> */}
-        <UnControlledForms/>
+        {/* <UnControlledForms/> */}
+        {/* <Dashboard/> */}
+        <Reducer/>
     </>
   );
 }
